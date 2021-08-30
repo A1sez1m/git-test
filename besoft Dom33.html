@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input id="k" type="text">
+    <value></value>
+    <script>
+        let inp = document.getElementById("k");
+        inp.onclick = (event)=>{    
+            console.log(event.target.value)
+            event.target.value = ""
+        }
+    </script> -->
+    <h1>Hello HTML</h1>
+    <input id = "inp" type="text">
+    <button id = "but">remove</button>
+    <ul id = "h"></ul>
+    <script>
+        let btn = document.getElementById('but');
+        let inpu = document.getElementById('inp');
+        let ul = document.getElementById('h');
+        let m = localStorage.getItem('key');
+
+        btn.onclick = ()=>{
+              localStorage.setItem('key', m + "---" + inpu.value)
+        ul.innerHTML += `<li>` + inpu.value + `</li>`
+        inpu.value = ""
+        }
+        let get = m.split("---");
+      for(i = 0 ; i< get.length ; i++){
+        if (get[i]);
+        ul.innerHTML  += `<li>${localStorage.getItem('key')}</li>`
+      }
+
+    </script>
+</body>
+</html>

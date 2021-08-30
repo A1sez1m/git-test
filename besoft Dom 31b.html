@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a {
+        align-items: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    .fon {
+        border: 1px solid black;
+        width: 450px;
+        height: 400px;
+        background-color: gray;
+    }
+
+    .shar {
+        border: 1px solid black;
+        border-radius: 100%;
+        width: 80px;
+        height: 80px;
+        background-color: red;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="a">
+        <div class="fon">
+            <div id = "red" class="shar"></div>
+        </div>
+        <button onclick="topp()" >top</button>
+        <button onclick="bot()">bottom</button>
+        <button onclick="rig()">right</button>
+        <button onclick="lef()">left</button>
+    </div>
+
+    <script>
+        let h = 0;
+        let g = 0; 
+        function topp(){
+            h -= 20
+            document.getElementById("red").style.top = `${h}px`
+        }
+        function bot(){
+            h += 20
+            document.getElementById("red").style.top = `${h}px`
+        }
+        function lef(){
+            g -= 20
+            document.getElementById("red").style.left = `${g}px`
+        }
+        function rig(){
+            g +=20
+            document.getElementById("red").style.left = `${g}px`
+        }
+    </script>
+</body>
+
+</html>

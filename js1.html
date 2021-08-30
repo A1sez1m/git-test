@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+    <h1>Products()</h1>
+    <h1>Sorting:
+        <button id ="btn1" >ASC</button>
+        <button id = "btn2">DESC</button>
+    </h>
+    <br>
+    <button id = "btn">Add product</button>
+    <ul id="div">
+    </ul>
+</form>
+    <script>
+        let btns = document.getElementById('btn')
+        let btns1 = document.querySelector("#btn1")
+        let btns2 = document.getElementById("btn2")
+        let mass = JSON.parse(localStorage.getItem('ger'))|| []
+        let div = document.getElementById('div')
+        btns.onclick = () =>{
+        console.log(mass);
+        let p = prompt("Title")
+        let price = +prompt("price")
+        mass.push({k : p , l : price})
+            localStorage.setItem('ger', JSON.stringify(mass))
+        }
+
+        div.innerHTML= mass.map(p => `<li>${p.k},${p.l + "$ "}${p.l *85 + " сом"}</li>`)
+
+        btns1.onclick = () =>{
+        mass.reverse()
+        localStorage.setItem('ger', JSON.stringify(mass))
+        }
+    </script>
+</body>
+</html>

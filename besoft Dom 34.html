@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1></h1>
+    <h3></h3>
+    <script>
+     let t = localStorage.getItem('kep')
+    let l = JSON.parse(t)
+     console.log(l)
+     document.body.children[0].innerHTML = l.name
+     document.body.children[1].innerHTML = l.age
+    </script> -->
+    <h1>Sign in</h1>
+    <p>Login:<input class="int" class="s" type="text"> </p>
+    <p>Password:<input class='int2' type="password"> </p>
+    <input type="checkbox" id="scales" >
+    <label for="scales">Remember</label>
+    <br>
+    <button id = "but">Sign in</button>
+    <script>
+        let btn = document.getElementById('but');
+        let inp = document.querySelector('.int');
+        let inp2 = document.querySelector('.int2')
+        btn.onclick = ()=>{
+            if(inp.value==='Aisezim'&&inp2.value==='12345'){
+                alert('welcome')
+                if(document.querySelector('#scales').checked){
+                    localStorage.setItem('name',inp.value)
+                    localStorage.setItem('pass',inp2.value)
+                    sessionStorage.clear()
+
+                }else{
+                    sessionStorage.setItem('name',inp.value)
+                    sessionStorage.setItem('pass',inp2.value)
+                    localStorage.clear()
+                }
+
+            }else{
+                alert('error')
+            }
+        }
+    </script>
+</body>
+
+</html>

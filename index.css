@@ -1,0 +1,110 @@
+.z {
+    width: 1350px;
+    height: 250px;
+    background-color: #8000ff;
+    text-align: center;
+}
+
+.x {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation-name: box;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes box {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+.c {
+    font-size: 50px;
+    color: white;
+    margin: 20px;
+    animation-name: box1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes box1 {
+    0% {
+        text-shadow: 0px 0px 0px white;
+    }
+
+    50% {
+        text-shadow: 1px 2px 4px white;
+    }
+
+    100% {
+        text-shadow: 0px 0px 0px white;
+    }
+}
+
+h3 {
+    color: white;
+}
+
+input {
+    width: 1200px;
+    height: 30px;
+}
+
+.v {
+    border: 1px solid white;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    margin: 8px;
+}
+
+.v:hover {
+    border: 1px solid white;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 30%;
+    box-shadow: 0px 0px 10px black;
+    display: inline-block;
+}
+
+.t {
+    border: 5px solid grey;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.p:hover {
+    transform: scale(0.8);
+    transition-duration: 2s;
+}
+
+.button {
+    border: 1px solid black;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    padding: 6px;
+    margin: 5px;
+}
+
+.w {
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}

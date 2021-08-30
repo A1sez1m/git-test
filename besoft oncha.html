@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" onchange="function_name(value)" name="">
+    <input type="number" onchange="function_name1(value)" name="">
+    <div id = "m"></div>
+    <script  type="text/javascript">
+     let g = document.getElementById("m")
+    function function_name(asan){
+        g.innerHTML += asan + ":"
+    }
+    function function_name1(asn){
+        g.innerHTML +=asn
+    }
+
+    </script> -->
+    <button onclick="hi(true)">img</button>
+    <div id="r"></div>
+    <script>
+        let a = true;
+        let g = document.getElementById("r")
+        function hi(t) {
+            if (a == t) {
+                a = false
+                g.innerHTML = `<img src="https://lh5.googleusercontent.com/p/AF1QipMp-5_nGZlQPNI5SnTjbaks7Bq1-A5_oGoJ4DHH" />`
+        }else {
+            g.innerHTML = `<img src="" />`
+            a = true
+        }
+    }
+    </script>
+</body>
+
+</html>

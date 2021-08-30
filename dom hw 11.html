@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Palette+Mosaic&family=Style+Script&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+  .color {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+
+  .bodycolor {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform:translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+  }
+</style>
+
+<body>
+  <h1></h1>
+  <button onclick="font()" class="color">fonts</button>
+  <button onclick="fon()" class="bodycolor">BodyColor</button>
+  <script>
+    let p = prompt()
+    let sap = ['Atkinson Hyperlegible', 'Palette Mosaic', 'Style Script']
+    let fons = ['green', 'red', 'blue', 'pink', 'yellow', 'grey']
+    let i = 0;
+    let s = 0;
+    function fon() {
+      document.body.style.backgroundColor = fons[i];
+      document.body.children[2].innerText = fons[i];
+      i == 5 ? i = 0 : i++;
+    }
+    document.body.children[0].innerText = p
+    function font() {
+      document.body.style.color = sap[s];
+      document.body.children[1].innerText = sap[s];
+      document.body.children[0].style.fontFamily = sap[s]
+      s == 2 ? s = 0 : s++;
+    }
+
+  </script>
+</body>
+
+</html>

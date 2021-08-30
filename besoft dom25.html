@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS text writer (DOM)</h1>
+    <h1></h1>
+    <script>
+        // console.dir(document.body.style.backgroundColor = 'red')
+        let a = ["H", "e", "l", "l", "o ", " f", "r", "o", "m ", "J", "S", "!"]
+        let b = 0;
+        let g = 0;
+        let colors = ['red', 'blue', 'green'];
+
+        setInterval(() => {
+            if (b == a.length) {
+                document.body.children[1].innerText = ""; b = 0;
+            }
+
+                document.body.children[1].innerHTML += `<span style="color:${colors[g]}">
+                    ${b % 2 == 0 ? a[b].toUpperCase() : a[b].toLowerCase()}</span>`
+        
+            b++
+            g == 2 ?   g = 0 : g++;
+
+        }, 200);
+
+        
+
+    </script>
+</body>
+
+</html>

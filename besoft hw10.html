@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=let, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let h = [];
+        // for (i = 0; i < 5; i++) {
+        //     let p = prompt("year old");
+        //     h.push(p)
+        // }
+        // let d = h.map ((p)=>{return (2021-p) + " -жылкы"})
+        // alert(d)
+
+        // let a = [1, 3, 4, 6, 7, 8];
+        // let b = a.reduce(function(s,c){
+
+        //     return s+c;
+        // },10+10)
+        // alert(b)
+        // let b = 0
+        // a.map((k) => {
+        //     return (b = b + k)
+        // })
+        // alert(b)
+
+        let p = +prompt('')
+        alert(p.toFixed(2));
+
+                function sayHi() {
+          alert('Привет');
+        }
+
+        setTimeout(sayHi, 500);
+
+        let timerId = setInterval(() => alert('tick'), 2000);
+        setTimeout(() => { clearInterval(timerId); alert('stop'); }, 5000);
+
+        // let p = []
+        // let t = setInterval(()=> {
+        //     let f = prompt('Hi');
+        //     p.push(f)
+        // }, 1000);
+        // setTimeout(() => {
+        //     clearInterval(t);
+        //     alert(p);
+        // }, 5000);
+
+        // let b = 0;
+        //     let color = ['red','yellow','green'];
+        // setInterval(() => {
+        //     document.body.style.backgroundColor=color[b];
+        //     b ==  3 ? b = 0 : b++;
+        // },1000);
+    </script>
+</body>
+
+</html>

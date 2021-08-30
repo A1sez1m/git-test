@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .h {
+        border: 1px solid rgb(117, 126, 129);
+        width: 800px;
+        height: 300px;
+        margin-left: 250px;
+    }
+
+    .log {
+        margin-left: 270px;
+        margin-top: 40px;
+        width: 250px;
+        height: 30px;
+    }
+</style>
+
+<body>
+    <h1 align="center" style="font-size: 100px;">Please, login to the system</h1>
+    <div class="h">
+        <input class="log" type="login">
+        <br>
+        <input class="log" type="password">
+        <button id="btn">show</button>
+    </div>
+    <script>
+        let button = document.getElementById("btn");
+        let p = 0;
+        let too = true;
+        button.onclick = () => {
+            too = !too;
+            button.innerText = `${too ? 'show' : 'hide'}`
+            
+        }
+    </script>
+</body>
+
+</html>

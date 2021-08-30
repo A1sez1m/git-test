@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="myFunction()" class="k">Add new item</button>
+    <ul class="s">
+    </ul>
+    <script>
+        let f = 0;
+        let fon = ['red', 'green', 'blue', 'yellow', 'pink']
+        function myFunction() {
+            let p = prompt("gjke")
+            if(f == 5){
+            alert('stop')
+            }else {
+        document.querySelectorAll('.s')[0].innerHTML += `<li style="background-color:${fon[f]}">${p}</li>`
+        f++
+            }
+        }
+        
+    </script> -->
+    <div>
+        <input id="input" type="text">
+        <button id="button">Show</button>
+    <h1 align="center"></h1>
+    </div>
+    <img id="i" src="" style="width: 400px; height: 400px;">
+    <script>
+        const images = {
+            'кошка': 'https://icdn.lenta.ru/images/2020/08/08/13/20200808131211392/square_1280_7efc59cef497ea4709ca7c66021763cb.jpg',
+            'собака': 'https://ichef.bbci.co.uk/news/640/cpsprodpb/475B/production/_98776281_gettyimages-521697453.jpg',
+            'ноутбук': 'https://mobile-review.com/articles/2020/image/echo-102/pic/4.jpg',
+            'телефон': 'https://www.ixbt.com/img/n1/news/2020/9/4/s-l1600_large.png',
+            'tesla': 'https://www.ixbt.com/img/n1/news/2021/5/3/maxresdefault_0_large.png',
+            'mercedes': 'https://lh3.googleusercontent.com/proxy/tELUz4UjB-eo_ZYlW9v3_emE3_HVuj47onh87tg416zbUhtELoNCQ8BvdS2vAp04SunpbMmn1qDjvEXYz742d6y9VQc',
+        };
+        let input = document.getElementById("input");
+        let button = document.getElementById("button");
+        let img = document.getElementById("i")
+        let fon = ['red', 'green', 'blue', 'pink', 'yellow', 'grey']
+        let k = 0
+        console.log(input)
+        button.onclick = () => {
+            if (input.value in images) {
+                img.src = images[input.value]
+                document.body.style.color = fon[k];
+                document.body.children[0].children[2].innerHTML = input.value
+                k == 5 ? k = 0 : k++;
+            } else {
+                img.src = "https://media.gettyimages.com/vectors/error-symbol-icon-red-cross-vector-id971623934"
+            }
+        }
+
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()" class="k">Add new item</button>
+      <ul>
+      <li class="s">Item 1</li>
+      </ul>
+    <script>
+        let f = 2;
+        function myFunction(){
+    document.querySelectorAll('.s')[0].innerHTML += `<li>Item ${+f}</li>`
+    f += 1;
+}
+    </script>
+</body>
+</html>

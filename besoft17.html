@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = +prompt('1-home');
+        let b = +prompt('2-home');
+        let c = +prompt('3-home');
+        if (b >= 15 && x >= 15) {
+            x = x - 15
+        }else if(b<=15 && x<=15){
+            if(x<=b){
+                x=x-b}
+            else{x=0}
+        }else if (x>=15 && b<=15){
+            x = x-15
+        }
+        else if (x<15 && b>15) {
+            x=0
+        }
+
+
+        if (c >= 10 && b >= 10) {
+            b = b - 10
+        }else if(c<10 && b<10){
+            if(b<=b){
+                b=b-c}
+            else{b=0}
+        }else if (b<10 && c>10){
+            b = b-c
+        }
+        else if (b<=10 && c>=10) {
+            b=0
+        }
+        alert(x+b+c)
+
+    </script>
+</body>
+
+</html>

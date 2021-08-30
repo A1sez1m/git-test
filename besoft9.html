@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .n {
+        width: 200px;
+        height: 400px;
+        padding: 10px;
+        border: 1px solid black;
+        background: #000;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    .z {
+        border: 1px solid black;
+        border-radius: 100%;
+        width: 120px;
+        height: 120px;
+        box-shadow: 0px 0px 10px red;
+        margin: 10px;
+        position: relative;
+        animation-name: box1;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+
+    span{
+        color:white;
+    }
+
+    /* @keyframes box1 {
+        0% {
+            background-color: red;
+            box-shadow: 0px 0px 10px red;
+        }
+
+        50% {background-color: white;}
+
+        100% {background-color: white;}
+    } */
+
+    .x {
+        border: 1px solid black;
+        border-radius: 100%;
+        width: 120px;
+        height: 120px;
+        box-shadow: 0px 0px 10px yellow;
+        margin: 10px;
+        position: relative;
+        animation-name: box2;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+
+    /* @keyframes box2 {
+        0% { background-color: white;}
+
+        50% {
+            background-color: yellow;
+            box-shadow: 0px 0px 10px yellow;
+        }
+
+        100% {background-color: white;}
+    } */
+
+    .c {
+        border: 1px solid black;
+        border-radius: 100%;
+        width: 120px;
+        height: 120px;
+        box-shadow: 0px 0px 10px green;
+        margin: 10px;
+        position: relative;
+        animation-name: box3;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+
+    /* @keyframes box3 {
+        0% {background-color: white;}
+
+        50% {background-color: white;}
+
+        100% {
+            background-color: green;
+            box-shadow: 0px 0px 10px green;
+        } */
+    
+</style>
+
+<body>
+    <div align="center">
+        <div class="n">
+            <div class="z"></div>
+            <div class="x">
+                <span style="font-size:100px "></span>
+            </div>
+            <div class="c"></div>
+        </div>
+    </div>
+
+    <script>
+        let num = 10;
+        let a = true;
+        setInterval(() => {
+            document.body.children[0].children[0].children[1].children[0].innerText = num   
+            if (num == 0){
+                num = 10;
+                document.body.children[0].children[0].children[1].style.backgroundColor=""
+            }else if (num >= 4 && a){
+                document.body.children[0].children[0].children[0].style.backgroundColor=""
+                document.body.children[0].children[0].children[1].style.backgroundColor=""
+                document.body.children[0].children[0].children[2].style.backgroundColor="green"
+
+            } else if (num <= 3 && num >=0){
+                document.body.children[0].children[0].children[1].style.backgroundColor="yellow"
+                a = !a
+            } else if (!a ){
+                document.body.children[0].children[0].children[0].style.backgroundColor="red"
+                document.body.children[0].children[0].children[2].style.backgroundColor=""
+                document.body.children[0].children[0].children[1].style.backgroundColor=""
+            }
+            num--;
+
+        },300)
+      
+    </script>
+</body>
+
+</html>

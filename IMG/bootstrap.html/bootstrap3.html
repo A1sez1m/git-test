@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary m-2">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="width: 1000px; border: 1px"
+        class="container justify-content-center shadow-sm rounded">
+        <form class="shadow-none p-3 mb-5 bg-light rounded">
+            <div class="mb-3 p-3">
+                <label for="exampleInputEmail1" class="form-label w-50">Images URL</label>
+                <input type="text" class="form-control" id="inp" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3 p-3">
+                <label for="exampleInputPassword1" class="form-label w-50">Text</label>
+                <input type="text" class="form-control" id="tex">
+            </div>
+            <button type="submit" id="btn" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div id="hi" class="container justify-content-center">
+
+    </div>
+
+
+
+    <script>
+        let products =JSON.parse(localStorage.getItem('product'))|| []
+        let btns = document.getElementById("btn")
+        let img = document.getElementById("inp");
+        let texts = document.getElementById("tex")
+        let card = document.getElementById("hi")
+        btns.onclick = () => {
+            if (img.value == '' && texts.value == '') {
+                alert("error")
+            } else {
+                products.push({ 'img': img.value, 'text': texts.value })
+                localStorage.setItem('product', JSON.stringify(products))
+                console.log(products);
+                tr()
+            }
+        }
+        function tr() {
+            products.map((v) => card.innerHTML += `<div  class="card shadow-none m-3 d-inline-flex bg-light rounded" style="width:240px";>
+            <img style="width:240px; height:150px;" src="${v.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text col-12 text-truncate">${v.text}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+            </div>`)
+        }
+        tr()
+    </script>
+</body>
+
+</html>

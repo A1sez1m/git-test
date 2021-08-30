@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jc</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt("1-home");
+        let b = +prompt("2-home");
+        let c = +prompt("3-home");
+
+        if (b >= 15 && a >= 15) {
+            a = a - 15;
+        }
+        else if (b < 15 && a < 15) {
+            if (a <= b) {
+                a = 0;
+            } else {
+                a = a - b;
+            }
+        }
+
+        else if (a >= 15 && b < 15) {
+            a = a - b;
+        }
+
+        else if (a < 15 && b >= 15) {
+            a = 0;
+        }
+
+
+        if (c >= 10 && b >= 10) {
+            b = b - 10;
+        }
+        else if (c < 10 && b < 10) {
+            if (b <= c) {
+                b = 0;
+            } else {
+                b = b - c;
+            }
+        }
+
+        else if (b >= 10 && c < 10) {
+            b = b - c;
+        }
+
+        else if (b < 10 && c >= 10) {
+            b = 0;
+        }
+        alert(a+b+c);
+    </script>
+</body>
+
+</html>

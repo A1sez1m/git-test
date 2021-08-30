@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <input onchange="her(value)" type="text">
+        <button onclick="hi()">Ok</button>
+        <img width="400px" height="400px" id = "img" src="">
+    <script>
+        let number = 0 ;
+        let numbers = 0;
+        function hi(){
+        let imgs = document.getElementById('img')
+      if(numbers >= 10){
+        if(number >= 550 && number <= 559){
+            imgs.src = "https://www.megacom.kg/uploads/ckeditor/pictures/506/content_ru_MegaCom_logo_1.png"
+        }else if (number >= 770 &&  number <= 779){
+            imgs.src = "https://upload.wikimedia.org/wikipedia/commons/7/7a/BeeLine_logo.png"
+        }else if(number >=700 && number <= 709){
+            imgs.src ="http://video.o.kg/image/logo.png"
+        }else{
+            imgs.src ="https://media.gettyimages.com/vectors/error-symbol-icon-red-cross-vector-id971623934"
+        }
+    }
+    }
+
+    function her (text){
+         number = text.substr(1,3);
+         numbers = text;
+    }
+    </script>
+</body>
+
+</html>

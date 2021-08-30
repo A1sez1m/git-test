@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: red;">
+    <div align="center" style="font-size: 100px;">
+        <span  class="one">00</span>:
+        <span  class="two">00</span>
+    </div>
+    <script>
+        let one=document.querySelector(".one");
+        let two=document.querySelector(".two");
+        let f = 0;
+        let g = 0;
+        let bull = true
+        let  s = ''
+        document.body.onkeyup=function(v){
+            if(v.key === ' ' && bull === true){
+                 s = setInterval(() => {
+                    document.body.style.backgroundColor = 'green' 
+                    g++;
+                    two.innerHTML=g > 9 ? g : "0" + g
+                   if( g === 60) {
+                        g = 0;
+                        f++;
+                        one.innerHTML= f > 9 ? f : "0"+f 
+                   }
+
+                },50);
+               bull= false
+            }else if(v.key === ' ' && bull === false){
+                let r = confirm('kjh');
+                if(r ){
+                    clearInterval(s);
+                    f=0;
+                    one.innerHTML=f+"0"
+                    g=0;
+                    two.innerHTML=g+"0"
+                }else{
+                    clearInterval(s);
+
+                }
+                bull=true
+            }
+        }
+    </script>
+</body>
+</html>

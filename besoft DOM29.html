@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 1px solid black;
+        border-radius :100%;
+        width: 200px;
+        height: 200px;
+        margin: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   .k{
+        display:flex;
+    }
+</style>
+<body>
+    <!-- <div class="k"> -->
+    <div class="a" onclick="myFunction()" style="background-color: green;"><h1 style="font-size: 150px; color: white;" >+</h1> </div>
+    <div><h1 class="b" style="font-size: 150px; color: black;" >0</h1> </div>
+    <div class="a" onclick="myFunction1()" style="background-color: red;"><h1 style="font-size: 150px; color: white;" >-</h1></div>
+    <!-- </div> -->
+  <script>
+    let i = 0;
+
+function myFunction(){
+    document.querySelectorAll('.b')[0].innerText = i;
+    i += 1 ;
+}
+function myFunction1(){
+    document.querySelectorAll('.b')[0].innerText = i;
+    i -= 1;
+}
+  </script>
+</body>
+</html>

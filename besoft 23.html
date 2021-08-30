@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const Instagram = [{
+        //     login: "n",
+        //     password: "1234",
+
+        // },
+        // {
+        //     login: "nu",
+        //     password: "2345",
+
+        // },
+        // {
+        //     login: "nur",
+        //     password: "3456",
+        // },
+        // ]
+        // for (let i = 0; i < 3; i++) {         
+        //     let login = prompt("login")
+        //     let password = prompt("password")
+        //     let o = 0;
+        //     let k = false;
+
+        //     while(Instagram.length > o){
+        //         if (login === Instagram[o].login && password=== Instagram[o].password){
+        //             console.log("welcome")
+        //             k=true;
+        //             i=3;
+        //         }   
+        //             o++;}
+        //             if (k==false){
+        //                 console.log(2>i? 'У вас две попытке':'block')
+        //             }
+        // }
+
+        function s(){
+        let i = prompt("wrife num from i to 7");
+        let m = ["Понидельник", "Вторник", "Среда", "Четверг", "Пятница", "Субота", "Воскресенье"]
+        if (!isNaN(+i)) {
+            console.log("Сегодня -" + m[( i % 7 )-1])
+        } else
+            console.error("Не правилный")
+        }
+        s()
+
+    </script>
+</body>
+
+</html>
